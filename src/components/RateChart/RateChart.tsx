@@ -29,7 +29,7 @@ const RateChart = () => {
       endDate
     ) {
       fetch(
-        `https://openexchangerates.org/api/time-series.json?app_id=0ba31629c32b4547bd722b5848241394&start=${startDate}&end=${endDate}&symbols=${
+        `https://openexchangerates.org/api/time-series.json?app_id=${process.env.NEXT_PUBLIC_API_KEY}&start=${startDate}&end=${endDate}&symbols=${
           localCurrencyCode || toCurrencyCode
         }&base=${fromCurrencyCode}`
       )

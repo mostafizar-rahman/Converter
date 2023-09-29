@@ -63,16 +63,3 @@ body {
 }
 
 
-
-/* input[type=radio]:checked ~ label {
-  background-color: blue;
-} */
-
-.check:checked ~ .lableCheck{
-
-  background-color: red !important;
-
-}
-/* .lableCheck{
-  background-color: red;
-} */

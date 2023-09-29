@@ -1,6 +1,3 @@
-type propsType = {
-    country : string
-}
 
 const getlocalStrogeCurrencyCode = () =>{
     const countryCode = localStorage.getItem("code")
