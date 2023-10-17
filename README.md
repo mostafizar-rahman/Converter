@@ -2,7 +2,7 @@
 
 Live Link: https://converter-currency-m.vercel.app/
 ### Technology
-Next.Js, Tailwind CSS
+Next.Js, Tailwind CSS, TypeScript
 
 
 
