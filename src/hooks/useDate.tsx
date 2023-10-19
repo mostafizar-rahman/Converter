@@ -10,7 +10,7 @@ const useDate = () => {
     // -------- end date / 1 month previous date
     const year = fullDate.getFullYear();
     const eMonth =
-      fullDate.getMonth().toString().length < 2
+      (fullDate.getMonth() + 1).toString().length < 2
         ? `0${fullDate.getMonth() + 1}`
         : fullDate.getMonth() + 1;
     const date =
@@ -21,14 +21,18 @@ const useDate = () => {
     const endDate = `${year}-${eMonth}-${date}`;
     setEndDate(endDate);
 
-
     // ---------- start date/today date
-    const sMonth = fullDate.getMonth() + 1;
+    const newSMonth =
+      (fullDate.getMonth() + 1).toString().length < 2
+        ? `0${fullDate.getMonth() + 1}`
+        : `${fullDate.getMonth() + 1}`;
+
+    const sMonth = parseInt(newSMonth);
+
     const previousDate = `${year}-${
       (sMonth - 1).toString().length < 2 ? `0${sMonth - 1}` : sMonth - 1
     }-${date}`;
-    setStartDate(previousDate)
-
+    setStartDate(previousDate);
   }, []);
 
   return [endDate, startDate];
